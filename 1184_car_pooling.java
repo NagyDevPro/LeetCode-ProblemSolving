@@ -10,8 +10,7 @@ class Solution {
     }
 
     public boolean carPooling(int[][] trips, int capacity) {
-
-        Arrays.sort(trips, (arr1, arr2) -> Integer.compare(arr1[1], arr2[1]));
+        
         PriorityQueue<Pair<Integer,Integer>> tripCapacity = new PriorityQueue<>(Comparator.comparingInt(p -> p.second));
         int farDropOff=0;// Java
         Arrays.sort(trips, (arr1, arr2) -> {
@@ -45,5 +44,5 @@ class Solution {
 
         return true;
     }
-
+    
     }
